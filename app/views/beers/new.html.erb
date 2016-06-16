@@ -9,7 +9,7 @@
           this article from being saved:
         </p>
           <% @beer.errors.full_messages.each do |msg| %>
-            <li><center><%= msg %></center></li>
+            <li><center><font color='red'><%= msg %></font></center></li>
           <% end %></center>
       </div>
     <% end %>
