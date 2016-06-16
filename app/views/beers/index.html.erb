@@ -1,0 +1,26 @@
+<h1>ALL THE BEERS</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Brewer</th>
+    <th>Price</th>
+    <th>Ounces</th>
+    <th>Calories</th>
+    <th>Rating</th>
+  </tr>
+
+  <% @beers.each do |beer| %>
+    <tr>
+      <td><%= beer.name %></td>
+      <td><%= beer.brewer %></td>
+      <td><%= beer.price %></td>
+      <td><%= beer.ounce %></td>
+      <td><%= beer.calorie %></td>
+      <td><%= beer.rating %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+<%= link_to 'GOT A NEW BEER?', controller: 'beers' %>
