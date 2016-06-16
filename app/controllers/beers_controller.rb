@@ -12,6 +12,10 @@ class BeersController < ApplicationController
     @beer = Beer.new
   end
 
+  def edit
+    @beer = Beer.find(params[:id])
+  end
+
   def create
     @beer = Beer.new(beer_params)
 
@@ -19,6 +23,16 @@ class BeersController < ApplicationController
       redirect_to @beer
     else
       render 'new'
+    end
+  end
+
+  def update
+    @beer = Beer.find(params[:id])
+
+    if @beer.update(beer_params)
+      redirect_to @beer
+    else
+      render 'edit'
     end
   end
 

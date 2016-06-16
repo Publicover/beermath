@@ -18,6 +18,8 @@
       <td><%= beer.ounce %></td>
       <td><%= beer.calorie %></td>
       <td><%= beer.rating %></td>
+      <td><%= link_to 'Show', beer_path(beer) %></td>
+      <td><%= link_to 'Edit', edit_beer_path(beer) %></td>
     </tr>
   <% end %>
 </table>
