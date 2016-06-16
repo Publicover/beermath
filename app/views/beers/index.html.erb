@@ -20,6 +20,9 @@
       <td><%= beer.rating %></td>
       <td><%= link_to 'Show', beer_path(beer) %></td>
       <td><%= link_to 'Edit', edit_beer_path(beer) %></td>
+      <td><%= link_to 'Destroy', beer_path(beer),
+              method: :delete,
+              data: { confirm: 'OK, well, just be careful.' } %></td>
     </tr>
   <% end %>
 </table>
