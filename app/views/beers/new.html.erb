@@ -1,39 +1,52 @@
-<h1> New beer? </h1>
+<center><h1> New beer? </h1></center>
 
 <%= form_for :beer, url: beers_path do |f| %>
-  <p>
+
+  <% if @beer.errors.any? %>
+      <div id="error_explanation">
+        <p>
+          <center><%= pluralize(@beer.errors.count, "error") %> prohibited
+          this article from being saved:
+        </p>
+          <% @beer.errors.full_messages.each do |msg| %>
+            <li><center><%= msg %></center></li>
+          <% end %></center>
+      </div>
+    <% end %>
+
+  <center><p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </p>
+  </p></center>
 
-  <p>
+  <center><p>
     <%= f.label :brewer %><br>
     <%= f.text_field :brewer %>
-  </p>
+  </p></center>
 
-  <p>
+  <center><p>
     <%= f.label :price %><br>
     <%= f.number_field :price %>
-  </p>
+  </p></center>
 
-  <p>
+  <center><p>
     <%= f.label :ounce %><br>
     <%= f.number_field :ounce %>
-  </p>
+  </p></center>
 
-  <p>
+  <center><p>
     <%= f.label :calorie %><br>
     <%= f.number_field :calorie %>
-  </p>
+  </p></center>
 
-  <p>
+  <center><p>
     <%= f.label :rating %><br>
     <%= f.number_field :rating %>
-  </p>
+  </p></center>
 
-  <p>
+  <center><p>
     <%= f.submit %>
-  </p>
+  </p></center>
 <% end %>
 
-<%= link_to "back", beers_path %>
+<center><%= link_to "back", beers_path %></center>

@@ -1,5 +1,5 @@
 class Beer < ActiveRecord::Base
 
-  validates :name, presence: true
+  validates :name, :brewer, :ounce, :ounce, presence: true
 
 end
