@@ -16,3 +16,9 @@
  #error_explanation {
    color: red;
  }
+
+ .sub-btn {
+   color: red;
+   font-size: px;
+   /*background-color: red;*/
+ }
