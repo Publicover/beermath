@@ -6,6 +6,13 @@ class ReviewsController < ApplicationController
     redirect_to beer_path(@beer)
   end
 
+  def destroy
+    @beer = Beer.find(params[:beer_id])
+    @review = @beer.reviews.find(params[:id])
+    @review.destroy
+    redirect_to beer_path(@beer)
+  end
+
   private
     def review_params
       params.require(:review).permit(:commenter, :body)
