@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :beers 
+  resources :beers do
+    resources :reviews
+  end
 
   root 'dashboards#index'
 

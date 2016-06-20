@@ -1,33 +1,54 @@
+<center>
 <p>
-  <center><strong>Name</strong></center>
-  <center><%= @beer.name %></center>
+  <strong>Name</strong>
+  <%= @beer.name %>
 </p>
 
 <p>
-  <center><strong>Brewer</strong></center>
-  <center><%= @beer.brewer %></center>
+  <strong>Brewer</strong>
+  <%= @beer.brewer %>
 </p>
 
 <p>
-  <center><strong>Price</strong></center>
-  <center><%= @beer.price %></center>
+  <strong>Price</strong>
+  <%= @beer.price %>
 </p>
 
 <p>
-  <center><strong>Ounces</strong></center>
-  <center><%= @beer.ounce %></center>
+  <strong>Ounces</strong>
+  <%= @beer.ounce %>
 </p>
 
 <p>
-  <center><strong>Calories</strong></center>
-  <center><%= @beer.calorie %></center>
+  <strong>Calories</strong>
+  <%= @beer.calorie %>
 </p>
 
 <p>
-  <center><strong>Rating</strong></center>
-  <center><%= @beer.rating %></center>
+  <strong>Rating</strong>
+  <%= @beer.rating %>
 </p>
 
+<br>
+<h3>Add a review?</h3>
+<%= form_for([@beer, @beer.reviews.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %> <br>
+    <%= f.text_field :commenter %>
+  </p>
+
+  <p>
+    <%= f.label :body %> <br>
+    <%= f.text_area :body %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+</center>
+<br>
 <br>
 <center>
 <%= link_to 'GOT A NEW BEER?', new_beer_path %>
