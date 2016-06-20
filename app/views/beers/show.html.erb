@@ -29,16 +29,8 @@
   <%= @beer.rating %>
 </p>
 <br>
-<br>
 <h3> Reviews </h2>
-<% @beer.reviews.each do |comment| %>
-  <p>
-    <!-- <strong>Review</strong> -->
-    <strong><%= comment.commenter %></strong>
-    <br>
-    <%= comment.body %>
-  </p>
-<% end %>
+<%= render @beer.reviews %>
 
 <br>
 <h3>Add a review?</h3>
