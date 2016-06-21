@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+
+  get 'users/new'
+
+  get 'users/edit'
+
+  get 'users/create'
+
+  get 'users/destroy'
+
+  get 'users/update'
+
   resources :beers do
     resources :reviews
   end
