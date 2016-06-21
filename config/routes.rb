@@ -1,14 +1,20 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
+  get 'sessions/create'
+  post 'sessions/create'
+
+  get 'sessions/destroy'
+
   get 'users/show'
 
   get 'users/new'
   post 'users/new'
+
+  get 'users/edit'
+
   post 'users/create'
-
-  patch 'users/edit'
-
-
 
   get 'users/destroy'
 
