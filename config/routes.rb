@@ -1,18 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
   get 'users/show'
 
   get 'users/new'
+  post 'users/new'
+  post 'users/create'
 
-  get 'users/edit'
+  patch 'users/edit'
 
-  get 'users/create'
+
 
   get 'users/destroy'
 
@@ -21,6 +17,8 @@ Rails.application.routes.draw do
   resources :beers do
     resources :reviews
   end
+
+  resources :users
 
   root 'dashboards#index'
 

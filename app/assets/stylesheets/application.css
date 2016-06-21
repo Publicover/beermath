@@ -17,6 +17,11 @@
    color: red;
  }
 
+ #notice {
+   color: red;
+   border: 1px solid red;
+ }
+
  .sub-btn {
    color: red;
    font-size: px;
